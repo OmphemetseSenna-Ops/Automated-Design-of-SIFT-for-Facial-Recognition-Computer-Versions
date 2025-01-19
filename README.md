@@ -50,9 +50,9 @@ Ensure your dataset is organized as follows:
 
 ## Data Generator
 The DataGeneratorWithSIFT class is responsible for loading images and their corresponding keypoints. It utilizes OpenCV’s SIFT detector to extract descriptors from the images, handling resizing and normalization:
-    ````bash
-        class DataGeneratorWithSIFT(Sequence):
-            ...
+    ```python
+class DataGeneratorWithSIFT(Sequence):
+    ...
 
 ## Parameters
 - **Batch Size**: Controls the number of samples processed before the model updates weights.
@@ -65,8 +65,8 @@ The hybrid model consists of:
 - A fully connected layer combining CNN and SIFT features to predict keypoints.
 
 The model combines a CNN with a SIFT descriptor input to predict keypoints:
-    ````bash
-       def create_model():
+    ````Python
+        def create_model():
             image_input = Input(shape=(IMG_WIDTH, IMG_HEIGHT, 3))
             ... 
 
